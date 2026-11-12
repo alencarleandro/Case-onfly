@@ -29,7 +29,8 @@ $env:PYTHONPATH = 'src'
 .\.venv\Scripts\python.exe -m onfly_report --input data/reservas_hoteis.csv --rates data/taxas_cambio.csv
 ```
 
-- **pytest 8.3.4 no Python 3.12.14** — `6 passed`. Os cinco testes fornecidos passaram e o teste adicional cobre a leitura após a reserva 200.
+- **pytest 8.3.4 no Python 3.11.18 e 3.12.14** — `6 passed` em ambas as versões. Os cinco testes fornecidos passaram e o teste adicional cobre a leitura após a reserva 200.
+- **CLI no Python 3.11.18** — os relatórios da amostra e da base completa coincidiram com os gerados no Python 3.12.14, exceto pelo horário de geração.
 - **Ruff 0.8.4** — todas as verificações passaram.
 - **Amostra** — o resumo, os totais por mês e o ranking coincidiram com o enunciado. Foram 12 reservas, 9 confirmadas, 28 noites e R$ 7.566,00, com diária média de R$ 270,21.
 - **Base completa** — `output/report.json` registrou 300 reservas, 235 confirmadas, 31 canceladas, 34 não comparecimentos, 1.347 noites e R$ 396.170,00, com diária média de R$ 294,11.
